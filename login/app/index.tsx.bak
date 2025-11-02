@@ -1,0 +1,47 @@
+import { Text, View, Image, StyleSheet, Pressable } from "react-native";
+
+export default function Index() {
+  return (
+
+    <View style={styles.container}>
+      <Image style={styles.logotype} source={require("../assets/images/react-logo.png")} />
+      <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 16 }} >Aplicación de Registro y Login</Text>
+      <Pressable style={styles.button} onPress={() => alert("Botón presionado")}>
+        <Text style={styles.buttonText}>Registro</Text>
+      </Pressable>
+      <Pressable style={styles.button} onPress={() => alert("Botón presionado")}>
+        <Text style={styles.buttonText}>Login</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#f0f0f0",
+  },
+  logotype:{
+    width: 200,
+    height: 200,  
+    marginBottom: 32,
+  },
+  button: {
+    backgroundColor: "black",
+    borderRadius: 8,
+    padding: 20,
+    margin:8,
+    width: "60%",
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+});
+
